@@ -22,8 +22,6 @@ export default user
 // You should only write User with capital U and in singular form because the mongodb will turn it into Users when more than 1 user registers
 
 
-
-
 // Time Stamp will tell the MONGODB to record 2 things:
 // 1- Time of Creation of the User
 // 2- Time of Update of the User

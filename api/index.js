@@ -15,12 +15,14 @@ app.use(express.json())
 
 
 app.use('/api/user', userRouter) 
-app.use('api/auth', authRoute)
+app.use('/api/auth', authRoute)
 
 // Middleware to handle errors
 app.use((err,req,res,next)=>{
     const statuscode = err.statusCode || 500
     const message = err.message || 'Internal Serever Error'
+    console.log(err);
+    
     return res.status(statuscode).json({
         success:false,
         statuscode,
